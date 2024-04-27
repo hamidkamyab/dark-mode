@@ -19,27 +19,35 @@ body {
     font-size: 14px;
 }
 
-.switch {
-    width: 36px;
-    height: 16px;
+.switch .switch-btn {
+    display: block;
+    width: 32px;
+    height: 20px;
     background-color: #70a1ff;
     box-shadow: 0 0 3px 1px #a4c0f5 inset;
 }
 
-.switch-btn {
-    width: 20px;
-    height: 20px;
+.switch .switch-btn::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
     top: 50%;
     transform: translateY(-50%);
     border: 1px solid #747d8c;
 }
 
-.switch.dark .switch-btn {
+.switch.dark .switch-btn::after {
     background-color: #2f3542;
+    right: 14px;
+    transition: 0.3s ease-out;
 }
 
-.switch.light .switch-btn {
+.switch.light .switch-btn::after {
     background-color: #f1f2f6;
+    right: 2px;
+    transition: 0.3s ease-out;
 }
 
 .main p {

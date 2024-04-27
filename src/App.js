@@ -1,6 +1,8 @@
+import { useState } from "react";
 import * as IO5 from "react-icons/io5";
 
 function App() {
+  const [darkMode,setDarkMode] = useState(false);
   return (
     <div className="App vh-100 d-flex flex-column justify-content-between">
       <div className="header" >
@@ -13,9 +15,9 @@ function App() {
 
           <div className="modeBox d-flex align-items-center gap-2">
             <IO5.IoSunny className="text-white" />
-            <label className="switch rounded-5 position-relative light" role="button">
-              <input type="checkbox" name="" className="d-none" />
-              <span className="switch-btn rounded-circle position-absolute"></span>
+            <label className={darkMode?"switch dark":"switch light"} role="button">
+              <input type="checkbox" name="" className="d-none" checked={darkMode} onChange={()=>setDarkMode(!darkMode)} />
+              <span className="switch-btn position-relative rounded-5"></span>
             </label>
             <IO5.IoMoon className="text-white"/>
           </div>
