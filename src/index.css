@@ -10,7 +10,7 @@ body {
 }
 
 .header {
-    background-color: #1e3799;
+    background-color: #3650e6;
 }
 
 .header ul a {
@@ -23,8 +23,12 @@ body {
     display: block;
     width: 32px;
     height: 20px;
-    background-color: #70a1ff;
-    box-shadow: 0 0 3px 1px #a4c0f5 inset;
+    background-color: rgb(230, 230, 230);
+    border: 1px solid rgb(112, 113, 146);
+    transition: 0.3s ease-out;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
 }
 
 .switch .switch-btn::after {
@@ -35,19 +39,28 @@ body {
     height: 16px;
     top: 50%;
     transform: translateY(-50%);
-    border: 1px solid #747d8c;
-}
-
-.switch.dark .switch-btn::after {
-    background-color: #2f3542;
-    right: 14px;
-    transition: 0.3s ease-out;
-}
-
-.switch.light .switch-btn::after {
-    background-color: #f1f2f6;
+    background-color: #0cafa7;
     right: 2px;
     transition: 0.3s ease-out;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
+}
+
+.switch input:checked+.switch-btn::after {
+    right: 14px;
+    transition: 0.3s ease-out;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
+}
+
+.switch input:checked+.switch-btn {
+    background-color: #262b35;
+    transition: 0.3s ease-out;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
 }
 
 .main p {
@@ -67,4 +80,45 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.App[data-theme='dark'] {
+    background-color: #201d1e;
+    transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+}
+
+.App[data-theme='light'] {
+    background-color: #fff;
+    transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+}
+
+.App[data-theme='dark'] .theme-text-color {
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+}
+
+.App[data-theme='light'] .theme-text-color {
+    color: #2d3436;
+    transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+}
+
+.App[data-theme='dark'] .theme-bg-color {
+    background-color: #312d2f;
+    border-color: #4d494b !important;
+    transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
 }
